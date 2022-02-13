@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <title>CRUD app</title>
+  </head>
+  <body>
+    <header id="header">
+      <nav>
+        <div class="container">
+          <div class="text-center">
+            <a href="/" class="nav-brand text-dark">User Management System</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main id="site-main">
+      <div class="container">
+        <div class="box-nav d-flex justify-between">
+          <div class="filter">
+            <a href="/">All Users</a>
+          </div>
+        </div>
+
+        <form id="update_user" method="POST">
+          <div class="new_user">
+            <div class="form-group">
+              <label for="name" class="text-light">Name</label>
+              <input type="hidden" name="id" value="" />
+              <input
+                type="text"
+                name="name"
+                value=""
+                placeholder="Enter user name"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="Email" class="text-light">Email</label>
+              <input
+                type="email"
+                name="email"
+                value=""
+                placeholder="Enter user email"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="gender" class="text-light">Gender</label>
+              <div class="radio_inline">
+                <input type="radio" id="radio-2" name="gender" value="Male" />
+                <label for="radio-2" class="text-light">Male</label>
+              </div>
+              <div class="radio_inline">
+                <input type="radio" id="radio-3" name="gender" value="Female" />
+                <label for="radio-3" class="text-light">Female</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="status" class="text-light">Status</label>
+              <div class="radio_inline">
+                <input type="radio" id="radio-4" name="status" value="Active" />
+                <label for="radio-4" class="text-light">Active</label>
+              </div>
+              <div class="radio_inline">
+                <input
+                  type="radio"
+                  id="radio-5"
+                  name="status"
+                  value="Inactive"
+                />
+                <label for="radio-5" class="text-light">Inactive</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <button type="submit" class="btn text-dark update">Save</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
